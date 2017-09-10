@@ -11,7 +11,7 @@
 
 getInitialState和getDefaultProps两个方法在es6方法定义的组件中用不到。
 
-```javascript
+```jsx harmony
 class Sample extends React.Component({
     constructor(prop){
         super(prop)
@@ -42,4 +42,31 @@ render函数应该是一个纯函数，完全根据 this.state 和 this.props �
 render 函数被调用完之后， componentDidMount 函数并不是会被立刻调用，
  componentDidMount 被调用的时候， render 函数返回的东西已 经引发了渲染，组件已经被“装载”到了 DOM 树上
 
-        componentDidMount只能在浏览器端被调用，在服务器端使用 React 的时候不会被调用.componentWilIMount都可以
+componentDidMount只能在浏览器端被调用，在服务器端使用 React 的时候不会被调用.componentWilIMount都可以
+
+###更新过程
+
+componentWillReceiveProps
+
+shouldComponentUpdate
+
+componentWillUpdate
+
+render
+
+componentDidUpdate
+
+并非所有的更新过程都会执行全部函数
+
+**只要父组件的render函数被调用，在render函数里面被渲染的子组件就会经历更新过程，不管父组件传给子组件的props有没有改变，都会触发子组件的
+componentWillReceiveProps**
+
+通过this.setState方法触发的更新过程不会调用这个函数。
+
+ render 函数的返回结果将用于构造 DOM 对象，而 shouldComponentUpdate 函数返回一个布尔值，告诉 React 库这个组件在这次更新过程中是否要继续 。
+ 和性能有关
+ 
+ ###卸载
+ 
+ 做一些清理工作（清理定时器之类的）
+ 
