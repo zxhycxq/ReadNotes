@@ -18,7 +18,7 @@ getInitialState
 
 defaultPops
 
-改变state，必须用this.setState 
+改变state，必须用this.setState
 
 其实直接用this.state也会改变组件内部的状态，但只是野蛮地改变了。并未驱动组件进行重新渲染。
 
@@ -29,5 +29,3 @@ prop的赋值在外部世界使用组件时，state的赋值在组件内部
 
 组件不应该改变prop的值，state存在的目的就是让组件来改变的。
 
-
-2017年9月7日20:46:42 今天有点发烧了，写得有点少。
