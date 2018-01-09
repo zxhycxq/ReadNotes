@@ -1,15 +1,17 @@
 # ReadNotes
 TODO
 
+book1-深入理解react和redux
+
+book2-华杉详解《孙子兵法
+
+book3-cleancode
+
 决策与判断
 
 1-深入react技术栈
 
 华杉详解《论语》--已经
-
-华杉详解《孙子兵法》--已经
-
-深入理解react和redux
 
 逻辑学导论
 
