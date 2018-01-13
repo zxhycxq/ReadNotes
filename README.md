@@ -7,6 +7,8 @@ book2-华杉详解《孙子兵法
 
 book3-cleancode
 
+book4 effective javascript
+
 决策与判断
 
 1-深入react技术栈
@@ -26,7 +28,6 @@ book3-cleancode
 社会心理学
 
 批判性思考指南
-
 
 
 21天地址：
