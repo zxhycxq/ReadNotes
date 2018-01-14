@@ -9,9 +9,13 @@ book3-cleancode
 
 book4 effective javascript
 
+book5-深入react技术栈
+
+book6-看清你的思维导图
+
 决策与判断
 
-1-深入react技术栈
+
 
 华杉详解《论语》--已经
 
