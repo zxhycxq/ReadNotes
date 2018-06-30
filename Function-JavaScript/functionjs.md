@@ -19,3 +19,84 @@ identify
    array2.forEach((ele)=> console.log(ele))
 
 ```
+
+纯函数代码
+
+1、可测试
+2、并发
+3、可缓存
+
+###高阶函数
+概念： 接受函数作为参数并且返回函数作为输出的函数。
+
+```ecmascript 6
+   const forEach=function (arr,fn) {
+     for(let i=0;arr.length;i++){
+       fn(arr[i])
+     }
+   }
+```
+
+```ecmascript 6
+  const forEachObject = (obj, fn) => {
+    for (var property in obj) {
+      if (obj.hasOwnProperty (property)) {
+        fn (property, obj[property])
+      }
+    }
+  }
+  
+  var objdemo={name:1,maximumAge:11};
+  forEachObject(objdemo,(m,n)=>{console.log(m +':'+n)})
+
+```
+
+```ecmascript 6
+const unless = (predicate, fn) => {
+  if (!predicate) {
+    fn ()
+  }
+}
+```
+
+```ecmascript 6
+const times = (tiimes, fn) => {
+  for (var i = 0; i < times; i++) {
+    fn (i)
+  }
+}
+```
+
+```ecmascript 6
+
+const every = (arr, fn) => {
+  let result = true;
+  for (let i = 0; i < arr.length; i++) {
+    // for(const value of arr)   fn(value)
+    result = result && fn (arr[i])
+  }
+  return result
+}
+
+const some = (arr, fn) => {
+  let result = false;
+  for (var value in arr)
+    result = result || fn (value)
+  return result
+}
+
+some ([1, 2, 3, NaN], isNaN)
+
+```
+
+```ecmascript 6
+const sortBy = (property) => {
+  return (a, b) => {
+    var result = (
+      a[property] < b[property] ? -1 : (
+        a[property] > b[property]
+      ) ? 1 : 0
+    )
+  }
+}
+```
